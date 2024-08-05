@@ -10,13 +10,13 @@ function getReadingTimeEmoji(minutes) {
   }
 }
 
-function Article({ title, date = "January 1, 1970", preview, minutesToRead }) {
+function Article({ title, date = "January 1, 1970", preview, minutes }) {
   return (
     <article>
       <h3>{title}</h3>
       <small>{date}</small>
       <p>{preview}</p>
-      {minutesToRead && <p>{getReadingTimeEmoji(minutesToRead)}</p>}
+      {minutes && <p>{getReadingTimeEmoji(minutes)}</p>}
     </article>
   );
 }
